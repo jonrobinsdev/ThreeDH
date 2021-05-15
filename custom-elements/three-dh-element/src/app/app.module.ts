@@ -19,7 +19,7 @@ import { ThreedhElementComponent } from './components/threedh-element/threedh-el
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
     const custom3DHElement = createCustomElement(ThreedhElementComponent, { injector });
-    customElements.define('threedh', custom3DHElement);
+    customElements.define('three-dh', custom3DHElement);
   }
   ngDoBootstrap(): void {
   }
