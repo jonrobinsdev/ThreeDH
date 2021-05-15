@@ -9,5 +9,8 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+// Remove ngZone from the app so that dual ngZones are not loaded while using the custom element in a different project.
+platformBrowserDynamic()
+  .bootstrapModule(
+    AppModule, { ngZone: 'noop' })
+  .catch(err => console.log(err));

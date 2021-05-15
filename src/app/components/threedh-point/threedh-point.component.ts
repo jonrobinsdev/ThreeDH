@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ThreeDHPoint } from 'src/app/models/threedh-point.model';
 
 @Component({
   selector: 'app-threedh-point',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./threedh-point.component.scss']
 })
 export class ThreedhPointComponent implements OnInit {
+
+  @Input() model: ThreeDHPoint;
 
   constructor() { }
 

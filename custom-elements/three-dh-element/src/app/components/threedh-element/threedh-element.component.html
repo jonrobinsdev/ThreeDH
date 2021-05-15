@@ -1,9 +1,11 @@
-<p>this is the custom element</p>
-<p>this is the custom element</p>
-<p>this is the custom element</p>
-<p>this is the custom element</p>
-<p>this is the custom element</p>
-<p>this is the custom element</p>
-<p>this is the custom element</p>
-<p>this is the custom element</p>
-<p>this is the custom element</p>
+<section class="ThreeDH d-flex align-items-center justify-content-center">
+    <div class="ThreeDH__main-edit" (click)="addOnClick($event)">
+        <img class="ThreeDH__background-image"
+             src="https://www.mcbridehomes.com/images/elevations/full/new_home_model_1659.jpg"
+             draggable="false"><img>
+        <div *ngFor="let point of points;">
+            <app-threedh-point [model]=point>
+            </app-threedh-point>
+        </div>
+    </div>
+</section>
