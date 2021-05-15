@@ -2,7 +2,7 @@
 
 Three D Home
 
-A Custom Angular Element (<three-dh>) that's exportable to a single, embeddable .js file.
+A Custom Angular Web Element (three-dh) that's exportable to a single, embeddable .js file.
 
 ## Development server
 
