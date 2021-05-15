@@ -1,16 +1,26 @@
-import { NgModule } from '@angular/core';
+import { DoBootstrap, Injector, NgModule } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ThreedhElementComponent } from './components/threedh-element/threedh-element.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ThreedhElementComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [ThreedhElementComponent]
 })
-export class AppModule { }
+export class AppModule implements DoBootstrap {
+  constructor(private injector: Injector) {
+    const custom3DHElement = createCustomElement(ThreedhElementComponent, { injector });
+    customElements.define('threedh', custom3DHElement);
+  }
+  ngDoBootstrap(): void {
+  }
+}
