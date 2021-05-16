@@ -2,13 +2,17 @@
     height: 100%;
     width: 100%;
     background-color: #f6f6f6;
+    cursor: pointer;
 
     &__main-edit {
-        position:relative;
-        cursor: pointer;
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
 
-    &__background-image {
-
+    &__edit-image {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }

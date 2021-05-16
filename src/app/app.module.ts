@@ -7,6 +7,7 @@ import { ThreedhEditComponent } from './components/threedh-edit/threedh-edit.com
 import { ThreedhPointComponent } from './components/threedh-point/threedh-point.component';
 
 import { CoreDataService } from './services/core-data.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CoreDataService } from './services/core-data.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [
     CoreDataService

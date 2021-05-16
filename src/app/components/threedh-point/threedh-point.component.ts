@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { ThreeDHPoint } from 'src/app/models/threedh-point.model';
 
 @Component({
@@ -9,10 +10,18 @@ import { ThreeDHPoint } from 'src/app/models/threedh-point.model';
 export class ThreedhPointComponent implements OnInit {
 
   @Input() model: ThreeDHPoint;
+  @Input() editMode: boolean = false;
+  
+  @Output() click: EventEmitter<number> = new EventEmitter();
+
+  public expanded: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onPointClick(rank: number) {
+    this.click.emit(rank);
+  }
 }

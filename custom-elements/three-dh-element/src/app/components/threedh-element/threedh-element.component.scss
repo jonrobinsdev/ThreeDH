@@ -1,14 +1,10 @@
 .ThreeDH {
     height: 100%;
     width: 100%;
-    background-color: blue;
+    background-color: #f6f6f6;
+    cursor: pointer;
 
     &__main-edit {
-        position:relative;
-        cursor: pointer;
-    }
-
-    &__background-image {
-
+        position: relative;
     }
 }

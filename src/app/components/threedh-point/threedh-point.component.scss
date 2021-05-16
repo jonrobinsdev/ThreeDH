@@ -1,4 +1,25 @@
 .ThreeDHPoint {
     position: absolute;
-    background-color: red;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #1e81b3;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+        background-color: white;
+    }
+
+    &--expanded {
+        color: black;
+        background-color: white;
+    }
+
+    &__tooltip {
+        color: black;
+        background-color: white;
+    }
 }

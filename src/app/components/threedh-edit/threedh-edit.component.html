@@ -1,10 +1,14 @@
 <section class="ThreeDH d-flex align-items-center justify-content-center">
-    <div class="ThreeDH__main-edit" (click)="addOnClick($event)">
-        <img class="ThreeDH__background-image rounded shadow"
+    <div class="ThreeDH__main-edit no-select" (click)="addOnClick($event)">
+        <img id="editImage"
+             class="ThreeDH__edit-image rounded shadow"
              src="https://www.mcbridehomes.com/images/elevations/full/new_home_model_1659.jpg"
-             draggable="false"><img>
+             draggable="false">
+        <img>
         <div *ngFor="let point of points;">
-            <app-threedh-point [model]=point></app-threedh-point>
+            <app-threedh-point [model]=point
+                               (click)="setActivePoint($event)">
+            </app-threedh-point>
         </div>
     </div>
 </section>

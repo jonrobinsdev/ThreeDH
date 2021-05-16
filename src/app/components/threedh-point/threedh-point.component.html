@@ -1,4 +1,16 @@
-<div class="ThreeDHPoint"
-     [ngStyle]="{top: model.y + 'px', left: model.x + 'px'}">
-    hi
-</div>
+<section *ngIf="model?.x && model.y && model.text"
+     class="ThreeDHPoint d-flex align-items-center justify-content-center shadow cursor-pointer no-select btn-circle"
+     [ngClass]="{'ThreeDHPoint--expanded': model.active}"
+     [ngStyle]="{top: model.y + 'px', left: model.x + 'px'}"
+     (click)="onPointClick(model.rank)"
+     [ngbTooltip]="pointTooltip"
+     tooltipClass="ThreeDHPoint__tooltip shadow"
+     placement="left"
+     container="body"
+     triggers="click:blur"> <!-- triggers="click:blur hover" -->
+    {{model.rank}}
+</section>
+
+<ng-template #pointTooltip>
+    {{model.text}}
+</ng-template>
