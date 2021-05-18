@@ -24,9 +24,14 @@
         color: black;
         background-color: white;
     }
+}
 
-    &__tooltip {
+::ng-deep .ThreeDHPoint__tooltip {
+    .tooltip-inner {
         color: black;
         background-color: white;
+      }
+    .arrow::before {
+        border-left-color: white;
     }
 }
