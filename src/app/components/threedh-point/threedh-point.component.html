@@ -1,5 +1,5 @@
 <section *ngIf="model?.x && model.y && model.text"
-     class="ThreeDHPoint d-flex align-items-center justify-content-center shadow cursor-pointer no-select btn-circle"
+     class="ThreeDHPoint d-flex align-items-center justify-content-center shadow cursor-pointer btn-circle"
      [ngClass]="{'ThreeDHPoint--expanded': model.active}"
      [ngStyle]="{top: model.y + 'px', left: model.x + 'px'}"
      (click)="onPointClick(model.rank)"

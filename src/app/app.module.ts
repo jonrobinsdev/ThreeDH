@@ -3,22 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ThreedhEditComponent } from './components/threedh-edit/threedh-edit.component';
-import { ThreedhPointComponent } from './components/threedh-point/threedh-point.component';
 
 import { CoreDataService } from './services/core-data.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ThreedhEditModule } from './components/threedh-edit/threedh-edit.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ThreedhEditComponent,
-    ThreedhPointComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ThreedhEditModule
   ],
   providers: [
     CoreDataService
