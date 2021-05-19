@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThreedhPointComponent } from './threedh-point.component';
+import { ThreeDHPointComponent } from './threedh-point.component';
 
-describe('ThreedhPointComponent', () => {
-  let component: ThreedhPointComponent;
-  let fixture: ComponentFixture<ThreedhPointComponent>;
+describe('ThreeDHPointComponent', () => {
+  let component: ThreeDHPointComponent;
+  let fixture: ComponentFixture<ThreeDHPointComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThreedhPointComponent ]
+      declarations: [ ThreeDHPointComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ThreedhPointComponent);
+    fixture = TestBed.createComponent(ThreeDHPointComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

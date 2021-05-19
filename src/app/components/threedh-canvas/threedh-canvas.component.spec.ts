@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThreedhEditComponent } from './threedh-edit.component';
+import { ThreeDHCanvasComponent } from './threedh-canvas.component';
 
-describe('ThreedhEditComponent', () => {
-  let component: ThreedhEditComponent;
-  let fixture: ComponentFixture<ThreedhEditComponent>;
+describe('ThreeDHCanvasComponent', () => {
+  let component: ThreeDHCanvasComponent;
+  let fixture: ComponentFixture<ThreeDHCanvasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThreedhEditComponent ]
+      declarations: [ ThreeDHCanvasComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ThreedhEditComponent);
+    fixture = TestBed.createComponent(ThreeDHCanvasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

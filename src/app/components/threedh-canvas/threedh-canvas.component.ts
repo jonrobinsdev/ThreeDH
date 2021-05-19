@@ -2,11 +2,11 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import { ThreeDHPoint } from '../../models/threedh-point.model';
 
 @Component({
-  selector: 'app-threedh-edit',
-  templateUrl: './threedh-edit.component.html',
-  styleUrls: ['./threedh-edit.component.scss']
+  selector: 'app-threedh-canvas',
+  templateUrl: './threedh-canvas.component.html',
+  styleUrls: ['./threedh-canvas.component.scss']
 })
-export class ThreedhEditComponent implements OnInit {
+export class ThreeDHCanvasComponent implements OnInit {
 
   public points: ThreeDHPoint[] = [];
 

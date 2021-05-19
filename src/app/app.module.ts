@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { CoreDataService } from './services/core-data.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ThreedhEditModule } from './components/threedh-edit/threedh-edit.module';
+import { ThreeDHCanvasModule } from './components/threedh-canvas/threedh-canvas.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { ThreedhEditModule } from './components/threedh-edit/threedh-edit.module
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ThreedhEditModule
+    ThreeDHCanvasModule
   ],
   providers: [
     CoreDataService

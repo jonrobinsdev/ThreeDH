@@ -7,7 +7,7 @@ import { ThreeDHPoint } from 'src/app/models/threedh-point.model';
   templateUrl: './threedh-point.component.html',
   styleUrls: ['./threedh-point.component.scss']
 })
-export class ThreedhPointComponent implements OnInit {
+export class ThreeDHPointComponent implements OnInit {
 
   @Input() model: ThreeDHPoint;
   @Input() editMode: boolean = false;

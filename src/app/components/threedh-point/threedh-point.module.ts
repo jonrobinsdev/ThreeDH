@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ThreedhPointComponent } from './threedh-point.component';
+import { ThreeDHPointComponent } from './threedh-point.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
-    ThreedhPointComponent
+    ThreeDHPointComponent
   ],
   imports: [
     BrowserModule,
@@ -14,8 +14,8 @@ import { BrowserModule } from '@angular/platform-browser';
     NgbModule
   ],
   exports: [
-    ThreedhPointComponent
+    ThreeDHPointComponent
   ],
-  bootstrap: [ThreedhPointComponent]
+  bootstrap: [ThreeDHPointComponent]
 })
-export class ThreedhPointModule { }
+export class ThreeDHPointModule { }
