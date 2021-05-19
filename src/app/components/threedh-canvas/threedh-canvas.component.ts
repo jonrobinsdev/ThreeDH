@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { CoreDataService } from 'src/app/services/core-data.service';
 import { ThreeDHPoint } from '../../models/threedh-point.model';
 
 @Component({
@@ -10,9 +11,15 @@ export class ThreeDHCanvasComponent implements OnInit {
 
   public points: ThreeDHPoint[] = [];
 
-  constructor() { }
+  constructor(private coreDataService: CoreDataService) { }
 
   ngOnInit(): void {
+    this.coreDataService.getPointsData()
+      .subscribe(points => {
+        if (points) {
+          this.points = points;
+        }
+      })
   }
 
   addOnClick(event: MouseEvent) {
