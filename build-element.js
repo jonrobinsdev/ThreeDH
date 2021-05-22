@@ -3,9 +3,9 @@ const concat = require('concat');
 
 build = async () =>{
 	const files = [
-		'./dist/ThreeDH/runtime.js',
-		'./dist/ThreeDH/polyfills.js',
-		'./dist/ThreeDH/main.js'
+		'./dist/ThreeDH-element/runtime.js',
+		'./dist/ThreeDH-element/polyfills.js',
+		'./dist/ThreeDH-element/main.js'
 	  ];
 	
 	  await fs.ensureDir('./dist/script-output');

@@ -24,20 +24,4 @@ import { ThreeDHCanvasComponent } from "./threedh-canvas.component";
     ],
     bootstrap: [ThreeDHCanvasComponent]
 })
-export class ThreeDHCanvasModule implements DoBootstrap {
-    constructor(private injector: Injector) {
-        if (true) {
-            const custom3DHElement = createCustomElement(ThreeDHCanvasComponent, { injector: this.injector });
-            customElements.define('three-dh', custom3DHElement);
-        }
-    }
-    // Remove zone.js for the Angular Element.
-    // https://www.angulararchitects.io/aktuelles/angular-elements-part-iii/
-    ngDoBootstrap(): void {
-        if (true) {
-            platformBrowserDynamic().bootstrapModule(ThreeDHCanvasModule, {
-                ngZone: 'noop'
-            }).catch(err => console.error(err));
-        }
-    }
-}
+export class ThreeDHCanvasModule { }
