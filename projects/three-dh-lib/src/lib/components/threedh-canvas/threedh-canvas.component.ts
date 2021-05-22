@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { CoreDataService } from 'src/app/services/core-data.service';
 import { ThreeDHPoint } from '../../models/threedh-point.model';
+import { CoreDataService } from '../../services/core-data.service';
 
 @Component({
   selector: 'app-threedh-canvas',

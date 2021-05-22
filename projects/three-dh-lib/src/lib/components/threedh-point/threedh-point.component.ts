@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-import { ThreeDHPoint } from 'src/app/models/threedh-point.model';
+import { ThreeDHPoint } from '../../models/threedh-point.model';
 
 @Component({
   selector: 'app-threedh-point',

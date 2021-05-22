@@ -3,8 +3,7 @@ import { createCustomElement } from "@angular/elements";
 import { BrowserModule } from "@angular/platform-browser";
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { CoreDataService } from "src/app/services/core-data.service";
-import { environment } from "src/environments/environment";
+import { CoreDataService } from "../../services/core-data.service";
 import { ThreeDHPointModule } from "../threedh-point/threedh-point.module";
 import { ThreeDHCanvasComponent } from "./threedh-canvas.component";
 
@@ -27,7 +26,7 @@ import { ThreeDHCanvasComponent } from "./threedh-canvas.component";
 })
 export class ThreeDHCanvasModule implements DoBootstrap {
     constructor(private injector: Injector) {
-        if (environment.element) {
+        if (true) {
             const custom3DHElement = createCustomElement(ThreeDHCanvasComponent, { injector: this.injector });
             customElements.define('three-dh', custom3DHElement);
         }
@@ -35,7 +34,7 @@ export class ThreeDHCanvasModule implements DoBootstrap {
     // Remove zone.js for the Angular Element.
     // https://www.angulararchitects.io/aktuelles/angular-elements-part-iii/
     ngDoBootstrap(): void {
-        if (environment.element) {
+        if (true) {
             platformBrowserDynamic().bootstrapModule(ThreeDHCanvasModule, {
                 ngZone: 'noop'
             }).catch(err => console.error(err));

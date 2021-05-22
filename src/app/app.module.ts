@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { CoreDataService } from './services/core-data.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ThreeDHCanvasModule } from './components/threedh-canvas/threedh-canvas.module';
+import { ThreeDHCanvasModule } from 'three-dh-lib';
+import { EditCoreDataService } from './services/edit-core-data.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ThreeDHCanvasModule } from './components/threedh-canvas/threedh-canvas.
     ThreeDHCanvasModule
   ],
   providers: [
-    CoreDataService
+    EditCoreDataService
   ],
   bootstrap: [AppComponent]
 })

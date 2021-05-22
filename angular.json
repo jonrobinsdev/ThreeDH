@@ -114,6 +114,37 @@
           }
         }
       }
+    },
+    "ThreeDH-lib": {
+      "projectType": "library",
+      "root": "projects/three-dh-lib",
+      "sourceRoot": "projects/three-dh-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/three-dh-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/three-dh-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/three-dh-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/three-dh-lib/src/test.ts",
+            "tsConfig": "projects/three-dh-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/three-dh-lib/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ThreeDH"
