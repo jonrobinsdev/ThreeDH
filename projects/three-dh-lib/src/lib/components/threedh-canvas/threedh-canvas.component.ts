@@ -1,13 +1,16 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import {ChangeDetectorRef, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { ThreeDHPoint } from '../../models/threedh-point.model';
 import { CoreDataService } from '../../services/core-data.service';
 
 @Component({
   selector: 'app-threedh-canvas',
   templateUrl: './threedh-canvas.component.html',
-  styleUrls: ['./threedh-canvas.component.scss']
+  styleUrls: ['./threedh-canvas.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom // Rejects external styling & scopes component styling to itself only
 })
 export class ThreeDHCanvasComponent implements OnInit {
+
+  @Input() edit: boolean;
 
   public points: ThreeDHPoint[] = [];
 

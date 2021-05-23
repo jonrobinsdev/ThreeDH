@@ -1,7 +1,5 @@
-import { NgModule, DoBootstrap, Injector } from "@angular/core";
-import { createCustomElement } from "@angular/elements";
+import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { CoreDataService } from "../../services/core-data.service";
 import { ThreeDHPointModule } from "../threedh-point/threedh-point.module";

@@ -24,6 +24,14 @@
         color: black;
         background-color: white;
     }
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 }
 
 ::ng-deep .ThreeDHPoint__tooltip {
@@ -35,7 +43,7 @@
         box-shadow: 2px 2px 4px 0px rgba(161, 161, 161, 1);
     }
 
-    .bs-tooltip-left .arrow::before {
+    .arrow::before {
         border-left-color: white;
         box-shadow: 2px 2px 4px 0px rgba(161, 161, 161, 1);
     }

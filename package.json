@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:element": "ng build ThreeDH-element --configuration element && node build-element.js",
     "build": "ng build",
+    "build:element": "ng build ThreeDH-element --configuration element && node build-element.js",
+    "build:lib": "ng build ThreeDH-lib",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

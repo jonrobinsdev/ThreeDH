@@ -207,11 +207,9 @@
                 }
               ],
               "outputHashing": "none",
-              "buildOptimizer": false,
+              "buildOptimizer": true,
               "optimization": true,
-              "extractLicenses": false,
-              "sourceMap": false,
-              "namedChunks": true
+              "aot": true
             }
           },
           "defaultConfiguration": "production"

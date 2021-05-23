@@ -21,7 +21,7 @@
       "dom"
     ],
     "paths": {
-      "three-dh-lib": [
+      "ThreeDH-lib": [
         "dist/three-dh-lib/three-dh-lib",
         "dist/three-dh-lib"
       ]
