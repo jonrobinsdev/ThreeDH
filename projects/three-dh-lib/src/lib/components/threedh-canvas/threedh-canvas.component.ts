@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ThreeDHPoint } from '../../models/threedh-point.model';
 import { CoreDataService } from '../../services/core-data.service';
 
@@ -11,7 +11,7 @@ export class ThreeDHCanvasComponent implements OnInit {
 
   public points: ThreeDHPoint[] = [];
 
-  constructor(private coreDataService: CoreDataService) { }
+  constructor(private coreDataService: CoreDataService, private ref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.coreDataService.getPointsData()
@@ -20,6 +20,7 @@ export class ThreeDHCanvasComponent implements OnInit {
           this.points = points;
         }
       })
+    this.ref.detectChanges();
   }
 
   addOnClick(event: MouseEvent) {
@@ -33,6 +34,7 @@ export class ThreeDHCanvasComponent implements OnInit {
         this.createNewPoint(event);
       }
     }
+    this.ref.detectChanges();
   }
 
   createNewPoint(event: MouseEvent) {
@@ -47,21 +49,25 @@ export class ThreeDHCanvasComponent implements OnInit {
 
       this.points.push(newPoint);
     }
+    this.ref.detectChanges();
   }
 
   resetAllPoints() {
     if (this.points && this.points.length) {
       this.points.forEach(p => p.active = false);
     }
+    this.ref.detectChanges();
   }
 
   setActivePoint(rank: number) {
     if (this.points && this.points.length) {
       this.points.forEach(p => p.active = p.rank === rank);
     }
+    this.ref.detectChanges();
   }
 
   clearAllPoints() {
     this.points = [];
+    this.ref.detectChanges();
   }
 }

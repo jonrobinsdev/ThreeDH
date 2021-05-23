@@ -206,7 +206,12 @@
                   "with": "src/environments/environment.element.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "none",
+              "buildOptimizer": false,
+              "optimization": true,
+              "extractLicenses": false,
+              "sourceMap": false,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"

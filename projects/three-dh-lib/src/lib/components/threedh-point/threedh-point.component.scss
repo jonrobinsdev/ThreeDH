@@ -27,11 +27,16 @@
 }
 
 ::ng-deep .ThreeDHPoint__tooltip {
+    border-radius: 5px;
+
     .tooltip-inner {
         color: rgb(29, 4, 4);
         background-color: white;
-      }
-    .arrow::before {
+        box-shadow: 2px 2px 4px 0px rgba(161, 161, 161, 1);
+    }
+
+    .bs-tooltip-left .arrow::before {
         border-left-color: white;
+        box-shadow: 2px 2px 4px 0px rgba(161, 161, 161, 1);
     }
 }

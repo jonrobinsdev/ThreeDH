@@ -4,8 +4,8 @@
      [ngStyle]="{top: model.y + 'px', left: model.x + 'px'}"
      (click)="onPointClick(model.rank)"
      [ngbTooltip]="pointTooltip"
-     tooltipClass="ThreeDHPoint__tooltip shadow"
-     placement="auto"
+     tooltipClass="ThreeDHPoint__tooltip"
+     placement="left auto"
      container="body"
      triggers="click:blur"> <!-- triggers="click:blur hover" -->
     {{model.rank}}
