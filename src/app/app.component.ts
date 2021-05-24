@@ -13,6 +13,6 @@ export class AppComponent {
 
   ngOnInit(): void {
     // Do initial data import here?
-    this.router.navigate(['home'], { relativeTo: this.route });
+    this.router.navigate(['editor'], { relativeTo: this.route });
   }
 }

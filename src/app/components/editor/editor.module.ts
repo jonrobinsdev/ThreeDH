@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
+import { EditorComponent } from './editor.component';
 import { ThreeDHCanvasModule } from 'three-dh-lib';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PointsListModule } from '../points-list/points-list.module';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    EditorComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +16,7 @@ import { PointsListModule } from '../points-list/points-list.module';
     PointsListModule
   ],
   exports: [
-    HomeComponent
+    EditorComponent
   ],
 })
-export class HomeModule { }
+export class EditorModule { }

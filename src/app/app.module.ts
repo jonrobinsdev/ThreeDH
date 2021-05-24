@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HomeModule } from './components/home/home.module';
+import { EditorModule } from './components/editor/editor.module';
 import { PointsListModule } from './components/points-list/points-list.module';
 import { AppDataService } from './services/app-data.service';
 
@@ -15,7 +15,7 @@ import { AppDataService } from './services/app-data.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule,
+    EditorModule,
     PointsListModule
   ],
   providers: [
