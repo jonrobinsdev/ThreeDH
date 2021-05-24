@@ -6,11 +6,9 @@ import { CoreDataService } from '../../services/core-data.service';
   selector: 'app-threedh-canvas',
   templateUrl: './threedh-canvas.component.html',
   styleUrls: ['./threedh-canvas.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom // Rejects external styling & scopes component styling to itself only
+  //encapsulation: ViewEncapsulation.ShadowDom // Rejects external styling & scopes component styling to itself only
 })
 export class ThreeDHCanvasComponent implements OnInit {
-
-  @Input() edit: boolean;
 
   public points: ThreeDHPoint[] = [];
 

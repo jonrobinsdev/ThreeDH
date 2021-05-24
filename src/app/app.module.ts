@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ThreeDHCanvasModule } from 'three-dh-lib';
-import { EditCoreDataService } from './services/edit-core-data.service';
+import { HomeModule } from './components/home/home.module';
+import { PointsListModule } from './components/points-list/points-list.module';
+import { AppDataService } from './services/app-data.service';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,11 @@ import { EditCoreDataService } from './services/edit-core-data.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
-    ThreeDHCanvasModule
+    HomeModule,
+    PointsListModule
   ],
   providers: [
-    EditCoreDataService
+    AppDataService
   ],
   bootstrap: [AppComponent]
 })
