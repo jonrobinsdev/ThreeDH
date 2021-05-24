@@ -3,7 +3,7 @@ import { EventEmitter } from '@angular/core';
 import { ThreeDHPoint } from '../../models/threedh-point.model';
 
 @Component({
-  selector: 'app-threedh-point',
+  selector: 'threedh-point',
   templateUrl: './threedh-point.component.html',
   styleUrls: ['./threedh-point.component.scss']
 })

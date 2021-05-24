@@ -6,9 +6,9 @@
              draggable="false">
         <img>
         <div *ngFor="let point of points;">
-            <app-threedh-point [model]=point
+            <threedh-point [model]=point
                                (click)="pointClicked.emit($event)">
-            </app-threedh-point>
+            </threedh-point>
         </div>
     </div>
 </section>

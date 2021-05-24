@@ -6,7 +6,7 @@
         </div>
         <div class="col-12 col-lg-9 order-1 order-md-2 p-1 d-flex flex-column">
             <div class="Editor__canvas-wrapper d-flex align-items-center justify-content-center">
-                <app-threedh-canvas [points]="points" (canvasClicked)="addOnClick($event)" (pointClicked)="setActivePoint($event)"></app-threedh-canvas>
+                <threedh-canvas [points]="points" (canvasClicked)="addOnClick($event)" (pointClicked)="setActivePoint($event)"></threedh-canvas>
             </div>
             <div class="Editor__button-bar">canvas helper buttons (image upload, save, embed code) go here?</div>
         </div>
