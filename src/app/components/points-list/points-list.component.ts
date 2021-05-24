@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ThreeDHPoint } from 'three-dh-lib';
 
 @Component({
   selector: 'app-points-list',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./points-list.component.scss']
 })
 export class PointsListComponent implements OnInit {
-
+  @Input() points: ThreeDHPoint[] = [];
   constructor() { }
 
   ngOnInit(): void {
