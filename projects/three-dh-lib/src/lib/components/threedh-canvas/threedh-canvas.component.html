@@ -7,7 +7,7 @@
         <img>
         <div *ngFor="let point of points;">
             <threedh-point [model]=point
-                               (click)="pointClicked.emit($event)">
+                               (pointCicked)="pointClicked.emit($event)">
             </threedh-point>
         </div>
     </div>

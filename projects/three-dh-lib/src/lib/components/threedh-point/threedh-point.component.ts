@@ -11,8 +11,8 @@ export class ThreeDHPointComponent implements OnInit {
 
   @Input() model: ThreeDHPoint;
   @Input() editMode: boolean = false;
-  
-  @Output() click: EventEmitter<number> = new EventEmitter();
+
+  @Output() pointCicked: EventEmitter<number> = new EventEmitter();
 
   public expanded: boolean = false;
 
@@ -22,6 +22,6 @@ export class ThreeDHPointComponent implements OnInit {
   }
 
   onPointClick(rank: number) {
-    this.click.emit(rank);
+    this.pointCicked.emit(rank);
   }
 }
