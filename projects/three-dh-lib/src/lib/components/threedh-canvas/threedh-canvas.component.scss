@@ -1,4 +1,8 @@
-.ThreeDHCanvas {
+:host {
+    display: block;
+}
+
+:host .ThreeDHCanvas {
     height: 100%;
     width: 100%;
     background-color: red;
