@@ -3,24 +3,18 @@ import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { environment } from 'src/environments/environment';
-import { ThreeDHCanvasComponent } from 'three-dh-lib';
-import { AppComponent } from './app.component';
+import { ThreeDHViewerComponent } from 'three-dh-lib';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule
-  ],
-  providers: [],
-  bootstrap: []
+  ]
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
       if (environment.element) {
           // Create Custom Element based on ThreeDH Canvas component
-          const custom3DHElement = createCustomElement(ThreeDHCanvasComponent, { injector: this.injector });
+          const custom3DHElement = createCustomElement(ThreeDHViewerComponent, { injector: this.injector });
           // Check it's not already been created in our custom elements, then proceed to define it.
           customElements.define('three-dh', custom3DHElement);
       }
